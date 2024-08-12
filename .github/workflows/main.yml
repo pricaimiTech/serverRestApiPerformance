@@ -1,0 +1,55 @@
+name: Run Tests
+
+# Define as permissões necessárias para este workflow
+permissions:
+  contents: write  # Permite operações de escrita
+
+# Define os eventos que acionam o workflow
+on:
+  push:
+    branches:
+      - main  # Aciona para a branch 'main'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4.1.3  # Certifique-se de usar versões estáveis
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4.0.2  # Define o Node.js
+
+    - name: Install dependencies
+      run: yarn  # Instala dependências
+
+    - name: Run tests
+      run: yarn test  # Executa os testes
+
+    - name: Archive Test Report
+      uses: actions/upload-artifact@v4  # Certifique-se de usar a versão correta
+      with:
+        name: test-report
+        path: coverage/  # Arquivo de cobertura gerado pelo Jest
+
+    - name: Create 'docs' Directory
+      run: mkdir -p docs  # Cria a pasta 'docs' se não existir
+
+    - name: Create .nojekyll File
+      run: touch docs/.nojekyll
+
+    - name: Copy Report to 'docs'
+      run: cp -r coverage/* docs/  # Copia o conteúdo para 'docs'
+
+    - name: Create '.nojekyll' File
+      run: touch docs/.nojekyll  # Desativa o Jekyll para evitar problemas de conversão
+
+    - name: Publish test coverage report
+      uses: EndBug/add-and-commit@v4
+      with:
+        add: docs
+        force: true
+        message: "Add generated docs"  # Mensagem para o commit
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Para autenticação no GitH
