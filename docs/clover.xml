@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1723504887526" clover="3.2.0">
+  <project timestamp="1723504887526" name="All files">
+    <metrics statements="20" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3" elements="26" coveredelements="18" complexity="0" loc="20" ncloc="20" packages="2" files="6" classes="6"/>
+    <package name="environment">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="stg.js" path="/home/runner/work/serverRestApiPerformance/serverRestApiPerformance/environment/stg.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="helpers.utils">
+      <metrics statements="17" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+      <file name="index.js" path="/home/runner/work/serverRestApiPerformance/serverRestApiPerformance/helpers/utils/index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="logs.js" path="/home/runner/work/serverRestApiPerformance/serverRestApiPerformance/helpers/utils/logs.js">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="random.js" path="/home/runner/work/serverRestApiPerformance/serverRestApiPerformance/helpers/utils/random.js">
+        <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
+      <file name="request.js" path="/home/runner/work/serverRestApiPerformance/serverRestApiPerformance/helpers/utils/request.js">
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+      <file name="schemaValidator.js" path="/home/runner/work/serverRestApiPerformance/serverRestApiPerformance/helpers/utils/schemaValidator.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
