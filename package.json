@@ -11,6 +11,9 @@
     "supertest": "^6.3.1"
   },
   "scripts": {
-    "test": "jest ./__Test__/usuarios/GETusuario.test.js"
+    "test": "jest --coverage",
+    "test-getUsers": "jest ./__Test__/usuarios/GETusuarios.test.js",
+    "test-getUser": "jest ./__Test__/usuarios/GETusuario.test.js",
+    "test-postUser": "jest ./__Test__/usuarios/GETusuario.test.js"
   }
 }

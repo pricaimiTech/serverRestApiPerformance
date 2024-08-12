@@ -12,7 +12,7 @@ describe("GET/ALL usuarios", () => {
   });
 
   it("Validar contrato", () => {
-    const schema = require("../../api/schema/usuarios.schema.json");
-    schemaValidator(response, schema);
+    const schema = require("../../api/schema/usuario/usuarios.schema.json");
+    schemaValidator(response.body, schema);
   });
 });

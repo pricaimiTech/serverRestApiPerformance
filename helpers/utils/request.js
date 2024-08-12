@@ -8,3 +8,13 @@ export async function requestGetAPI(path) {
     .expect(200);
   return response;
 }
+
+export async function requestPostAPI(path, payload) {
+  const response = await request(baseURL)
+    .post(path)
+    .send(payload)
+    .set('Accept', 'application/json')
+    .expect('Content-Type', /json/)
+    .expect(201)
+  return response.body;
+}
