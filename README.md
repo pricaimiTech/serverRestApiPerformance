@@ -1,4 +1,4 @@
-## Automação de Serviço [![Run Tests](https://github.com/pricaimiTech/geographqlJestAPI/actions/workflows/main.yml/badge.svg)](https://github.com/pricaimiTech/geographqlJestAPI/actions/workflows/main.yml)
+## Automação de Serviço e Performance na API ServeRest
 
 ### Tecnologias utilizadas
 
@@ -9,7 +9,7 @@
 
 ### Documentação da API
 
-A documentação da API geographql pode ser consulta [link da documentação](https://geographql.netlify.app/docs/queries/country)
+A documentação da API ServeRest pode ser consulta [link da documentação](https://serverest.dev/#/)
 
 ### Como configurar e rodar o projeto
 
@@ -27,7 +27,7 @@ A documentação da API geographql pode ser consulta [link da documentação](ht
 
 ### Acesse o report 
 
-Para acessar o report da última execução click no [link](https://pricaimitech.github.io/geographqlJestAPI/docs/lcov-report/index.html)
+Em breve ....
 
 ### Organização dos testes
 
@@ -37,11 +37,9 @@ A pasta `coverage` armazena os dados do relatório de execução gerada
 
 A pasta `environemnt` armazena dados fixos a serem usados nos testes
 
-A pasta `graphql/query` armazena as querys e variabels
+A pasta `api/responseBody` armazena payloads de envio
 
-A pasta `graphql/schema` armazena os schemas
-
-Na parta `helpers/date` estão armazenadas as listas de massa de teste
+A pasta `api/schema` armazena os schemas
 
 Na parta `helpers/utils` são funções utilitarias daquele serviço que poderão ser utilizadas em outros repositórios.
 
@@ -51,13 +49,18 @@ Com o arquivo `jest.config.mjs` será feito a configuração dos testes.
 
 ```
 ├── __Test__
+    ├── produtos/
+    ├── usuarios/
+├── api
+    ├── responseBody/
+        ├── users/
+        ├── produtos/
+    ├── schema/
+        ├── users/
+        ├── produtos/
 ├── coverage
 ├── environment
-├── graphql
-    ├── query/
-    ├── schema/
 ├── helpers
-    ├── date/
     ├── utils/
 ├── README.md
 ```
