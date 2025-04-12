@@ -1,0 +1,5 @@
+export const loginPayload = {
+    email: 'fulano@qa.com',
+    password: 'teste'
+  };
+  

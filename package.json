@@ -1,19 +1,28 @@
 {
   "name": "serve-rest-jest-api-performance",
   "version": "0.0.1",
+  "type": "commonjs",
   "dependencies": {
     "@babel/preset-env": "^7.19.4",
-    "chai": "^4.3.6",
-    "jest": "^29.2.2",
-    "jsonschema": "^1.4.1",
-    "mocha": "^10.1.0",
-    "moment": "^2.29.4",
-    "supertest": "^6.3.1"
+    "ajv": "^8.17.1",
+    "axios": "^1.8.4",
+    "chai": "^4.5.0",
+    "dotenv": "^16.5.0",
+    "fs-extra": "^11.3.0",
+    "k6": "^0.0.0",
+    "mochawesome": "^7.1.3",
+    "openapi-schema-to-json-schema": "^2.2.0"
   },
   "scripts": {
-    "test": "jest --coverage",
-    "test-getUsers": "jest ./__Test__/usuarios/GETusuarios.test.js",
-    "test-getUser": "jest ./__Test__/usuarios/GETusuario.test.js",
-    "test-postUser": "jest ./__Test__/usuarios/GETusuario.test.js"
+    "env:dev": "cross-env APP_ENV=dev",
+    "lint": "eslint src --fix",
+    "performance": "k6 run src/tests/performance/serveRest.k6.js",
+    "report:serve": "npx serve ./mochawesome-report",
+    "generate:schemas": "npm run env && node -r ./src/config/setupEnv.js src/tools/generateSchemas.js",
+    "test:dev": "npm run env:dev && mocha ./src/tests/funcional/*test.js --reporter mochawesome",
+    "testSchema": "npm run generate:schemas && npm run test"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }

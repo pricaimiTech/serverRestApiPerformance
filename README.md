@@ -1,17 +1,20 @@
-## Automação de Serviço e Performance na API ServeRest
+# Automação de Serviço e Performance na API ServeRest
 
-### Tecnologias utilizadas
-
-- [Node.js](https://nodejs.org/en) v18.17.1
-- [JEST](https://jestjs.io/pt-BR/docs/expect)
-- [esLint](https://eslint.org)
-- [Babel](https://babeljs.io)
-
-### Documentação da API
+## Documentação da API
 
 A documentação da API ServeRest pode ser consulta [link da documentação](https://serverest.dev/#/)
 
-### Como configurar e rodar o projeto
+## Tecnologias utilizadas
+
+
+![Babel](https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Eslint](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white)
+![GithubAction](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+
+
+## Como configurar e rodar o projeto
 
 - Instale todas as dependencias
 
@@ -25,11 +28,11 @@ A documentação da API ServeRest pode ser consulta [link da documentação](htt
   yarn test
 ```
 
-### Acesse o report 
+## Acesse o report 
 
 Em breve ....
 
-### Organização dos testes
+## Organização dos testes
 
 Dentro da pasta de `__Test__` se encontra as validações e requisições para realizar testes de contrato e serviço da aplicação.
 
